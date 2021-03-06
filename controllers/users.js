@@ -82,7 +82,7 @@ function updateUsers(req, res) {
 
 function deleteUser(req, res) {
     let userId = req.params.id;
-    User.deleteOne({ _id : usersId}, (err) => {
+    User.deleteOne({ _id : userId}, (err) => {
         if(err) {
             res.status(500).send({ message: `${err}` });
         } else {

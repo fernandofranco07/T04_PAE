@@ -3,7 +3,7 @@ var router = express.Router();
 
 let AnimalController = require('../controllers/animals');
 
-/* GET animals */
+/* GET animals listing */
 router.get('/', AnimalController.readAnimal);
 /* POST animal */
 router.post('/', AnimalController.createAnimal);

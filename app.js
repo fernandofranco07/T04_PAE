@@ -10,6 +10,8 @@ const lessMiddleware = require('less-middleware');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const animalsRouter = require('./routes/animals');
+const authRouter = require('./routes/auth');
+const profileRouter = require('./routes/profile');
 const app = express();
 
 // view engine setup
@@ -28,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/animals', animalsRouter);
-
+app.use('/auth', authRouter);
+app.use('/profile', profileRouter);
 
 module.exports = app;

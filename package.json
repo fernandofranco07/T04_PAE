@@ -8,6 +8,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "cookie-parser": "~1.4.4",
+    "cookie-session": "^1.4.0",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
     "ejs": "~2.6.1",
@@ -17,6 +18,8 @@
     "less-middleware": "~2.2.1",
     "mongoose": "^5.11.19",
     "morgan": "~1.9.1",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
     "pg": "^8.5.1",
     "pg-promise": "^10.9.2"
   }

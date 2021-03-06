@@ -5,6 +5,9 @@ const axios = require('axios');
 const router = express.Router();
 const No_Cats = 5;
 
+require​(​'dotenv'​)​.config​();
+require​(​'./config/passport'​);
+
 let animals = []
 for (let i = 0; i< No_Cats; i++) {
   animals.push(data[i]);
@@ -12,7 +15,6 @@ for (let i = 0; i< No_Cats; i++) {
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
-
   const animalsPromises = animals.map(() => {
     return new Promise((resolve, reject) => {
       axios.get('https://api.thecatapi.com/v1/images/search')
@@ -36,7 +38,7 @@ router.get('/', async function(req, res, next) {
     });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/index/:id', (req, res) => {
   const {id} = req.params;
   const {url} = req.query;
   const animal = animals.find(animal => animal.id == id);
