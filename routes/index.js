@@ -5,9 +5,6 @@ const axios = require('axios');
 const router = express.Router();
 const No_Cats = 5;
 
-require​(​'dotenv'​)​.config​();
-require​(​'./config/passport'​);
-
 let animals = []
 for (let i = 0; i< No_Cats; i++) {
   animals.push(data[i]);

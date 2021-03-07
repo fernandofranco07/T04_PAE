@@ -7,6 +7,6 @@ passport.use(
         callbackURL: 'http://localhost:3000/auth/google/redirect',
     },
     function (accessToken, refreshToken, profile, done) { 
-        console.log('working');
+        console.log(profile);
     })
 );

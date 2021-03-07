@@ -1,4 +1,6 @@
+require​(​'./config/passport'​);
 
+const passport = require('passport');
 const path = require('path');
 const logger = require('morgan');
 const express = require('express');
@@ -25,6 +27,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 /* Routes */
 app.use('/', indexRouter);
