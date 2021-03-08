@@ -4,8 +4,9 @@
  * Module dependencies.
  */
 
-require('dotenv').config();
+
 let mongoose = require('mongoose');
+require('dotenv').config();
 
 var app = require('../app');
 var debug = require('debug')('adopt-me:server');
